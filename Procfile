@@ -1,1 +1,1 @@
-worker:python3 bump-bot.py
+worker: python3 bump-bot.py
