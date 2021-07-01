@@ -43,4 +43,4 @@ async def helpsheet(ctx):
     embed.add_field(name="`-bumpbot [on/off]`", value="Turn the bot on or off.")
     await client.get_channel(id=857905253348409355).send(embed=embed)
 
-client.run('insert token')
+client.run('NzExNDg3MTM1MzQwOTUzNjEw.XsDuBw.-GEUZ8AlxJUkHdYQoErMw4wybIc')
