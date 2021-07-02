@@ -18,7 +18,7 @@ async def bump():
     print(status, channel)
     while status == True:
         await channel.send("!d bump")
-        await asyncio.sleep(5)
+        await asyncio.sleep(7200)
 
 @client.event
 async def on_ready():
