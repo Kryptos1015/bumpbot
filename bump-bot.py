@@ -10,7 +10,7 @@ channel = ''
 async def get_channel(ctx):
     global channel
     for channel in client.get_all_channels():
-        if 'bump' == channel.name:
+        if 'bump' in channel.name:
             channel = channel.id
 
 @client.event
