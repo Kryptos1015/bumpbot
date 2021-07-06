@@ -9,10 +9,9 @@ channel = ''
 @client.command()
 async def get_channel(ctx):
     global channel
-    channel = 857905253348409355
-#     for channel in client.get_all_channels():
-#         if 'bump' in channel.name:
-#             channel = channel.id
+    for channel in client.get_all_channels():
+        if 'bump' in channel.name:
+            channel = channel.id
 
 @client.event
 async def bump():
