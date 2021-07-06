@@ -11,7 +11,7 @@ async def get_channel(ctx):
     global channel
     for channel in client.get_all_channels():
         if 'bump' in channel.name:
-            channel = channel.id
+            channel = client.get_channel(channel.id)
 
 @client.event
 async def bump():
@@ -49,5 +49,3 @@ async def helpsheet(ctx):
     await channel.send(embed=embed)
 
 client.run('NzExNDg3MTM1MzQwOTUzNjEw.XsDuBw.86lDub9Kh18JHPpvotXtQUJ6m4c')
-
-
