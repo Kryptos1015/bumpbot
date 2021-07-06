@@ -6,12 +6,12 @@ client = commands.Bot(command_prefix='-')
 status = False
 channel = ''
 
-# @client.command()
-# async def get_channel(ctx):
-#     global channel
-#     for channel in client.get_all_channels():
-#         if 'bump' in channel.name:
-#             channel = client.get_channel(channel.id)
+@client.command()
+async def get_channel(ctx):
+    global channel
+    for channel in client.get_all_channels():
+        if 'bump' in channel.name:
+            channel = client.get_channel(channel.id)
 
 @client.event
 async def bump():
@@ -23,13 +23,14 @@ async def bump():
 @client.event
 async def on_ready():
     print('bot online')
-    channel = client.get_channel(857905253348409355) 
+    await get_channel('x')
     await bump()
 
 @client.event
 async def on_guild_join(guild):
-    channel = client.get_channel(857905253348409355) 
     await helpsheet('x')
+    await get_channel('x')
+    await bump()
 
 @client.command()
 async def bumpbot(ctx):
