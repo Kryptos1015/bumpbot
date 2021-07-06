@@ -29,6 +29,8 @@ async def on_ready():
 @client.event
 async def on_guild_join(guild):
     await helpsheet('x')
+    await get_channel('x')
+    await bump()
 
 @client.command()
 async def bumpbot(ctx):
