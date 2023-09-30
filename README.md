@@ -1,5 +1,5 @@
 # Bumpbot
-Doesn't do much, bumps a server every 2 hours.
+Bumps a server every 2 hours.
 
 ***NOTE:*** Make sure a channel in your server has the word "bump" in it. Won't work otherwise.
 
